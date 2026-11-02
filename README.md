@@ -36,7 +36,13 @@ Templates: **daily**, **habits**, **weekly** in Korean and English. Import them 
 
 ## Distribution status
 
-GitHub release downloads are installable preview packages. They are separate from approval in Notion Marketplace, Joplin's plugin directory, Logseq Marketplace and Chrome Web Store. Check each release's verification notes for actual host tests and limitations. Logseq DB graphs and Org-mode exports are not supported by the first plugin. The browser extension captures only explicitly selected text, not entire private notebooks or images.
+Joplin and Logseq provide manually installable download releases. Actual isolated-host checks covered Joplin 3.7.22 and Logseq 0.10.15, native file export, original preservation and Habitude import/reimport. Logseq uses Download as the primary path; optional clipboard writes were denied on the tested host. Its AX/background capture discrepancy and foreground mouse verification are documented in its source repository.
+
+The browser extension remains a preview: its code and package tests pass, but an actual browser UI test has not been completed. Notion currently provides the Mac personal read-only connection and templates. Public OAuth registration remains pending.
+
+GitHub downloads are separate from approval in Notion Marketplace, Joplin's plugin directory, Logseq Marketplace and Chrome Web Store. Check release notes for each exact package and actual publication status. Logseq DB graphs and Org-mode exports are unsupported. The browser extension captures only explicitly selected text, not entire private notebooks or images.
+
+Logseq Marketplace: [registration request #953](https://github.com/logseq/marketplace/pull/953) submitted; acceptance is pending. Joplin npm directory publication awaits publisher authentication. Chrome Web Store submission and Notion public OAuth registration are not complete.
 
 ## Privacy and support
 
