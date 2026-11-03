@@ -2,9 +2,21 @@
 
 ## AI agent extensions · 에이전트 확장
 
-[Hermes Agent, ChatGPT desktop and Claude Code](https://github.com/legott-ai/habitude-agent-integrations) provide platform-native skills/plugins and a common local MCP launcher for explicitly selected Habitude / Obsidian writing. Find downloads in the [official integrations page](https://habitude.ai/integrations#ai-agents). These packages support search, excerpts and cited reflection; they do not edit entries or habits. ChatGPT web/mobile are not connected by the desktop package. Returned excerpts may enter the host's configured model context; local setup requires explicit scope and acknowledgement.
+[Hermes Agent, ChatGPT desktop and Claude Code](https://github.com/legott-ai/habitude-agent-integrations) provide platform-native extensions for explicitly selected Habitude / Obsidian writing. Version **0.2.0 includes the local search runtime** and does not require an installed Habitude app. The runtime runs on macOS or Linux with Python 3.10+ and SQLite FTS5; host availability still applies, and ChatGPT is desktop-only. These packages support search, excerpts, index status/cache refresh and cited reflection, not entry editing or habit checkoffs. Returned excerpts may enter the host's configured model context; setup requires explicit Vault scope and acknowledgement.
 
-Hermes Agent·ChatGPT 데스크톱·Claude Code용 스킬·플러그인을 제공합니다. 선택한 Vault 검색·발췌·근거 기반 회고를 지원하고 원본을 수정하지 않습니다. 검색 결과가 에이전트의 모델 문맥에 전달될 수 있으므로 연결할 Vault를 직접 고르고 동의해야 합니다. 다운로드 배포와 공식 디렉터리 승인은 별개입니다.
+**0.2.0에는 로컬 검색 런타임이 포함**되어 Habitude 앱의 별도 설치 없이 직접 선택한 Habitude / Obsidian Vault를 연결합니다. macOS 또는 Linux의 Python 3.10 이상과 SQLite FTS5가 필요하며 호스트별 실행 환경 제한은 유지됩니다. Hermes는 네이티브 플러그인과 스킬, Claude Code는 플러그인, ChatGPT는 데스크톱용 패키지입니다. 기록 검색·발췌·색인 상태/캐시 갱신·근거 기반 회고를 지원하고, 기록 수정이나 습관 완료는 수행하지 않습니다. 검색 발췌가 모델 문맥에 들어갈 수 있으므로 Vault를 직접 고르고 동의해야 합니다. ChatGPT 웹·모바일은 연결하지 않습니다.
+
+| Agent / 에이전트 | Download / 다운로드 | Setup / 설치 안내 |
+| --- | --- | --- |
+| Hermes Agent | [0.2.0 plugin + skill](https://github.com/legott-ai/habitude-agent-integrations/releases/download/v0.2.0/habitude-hermes-0.2.0.zip) | [Hermes](https://github.com/legott-ai/habitude-agent-integrations/tree/main/hermes) |
+| ChatGPT desktop | [0.2.0 desktop plugin](https://github.com/legott-ai/habitude-agent-integrations/releases/download/v0.2.0/habitude-chatgpt-0.2.0.zip) | [ChatGPT desktop](https://github.com/legott-ai/habitude-agent-integrations/tree/main/chatgpt) |
+| Claude Code | [0.2.0 plugin](https://github.com/legott-ai/habitude-agent-integrations/releases/download/v0.2.0/habitude-claude-code-0.2.0.zip) | [Claude Code](https://github.com/legott-ai/habitude-agent-integrations/tree/main/claude-code) |
+
+Hermes official community catalog: [submission PR #148671](https://github.com/NousResearch/hermes-agent/pull/148671), open and awaiting maintainer review/CI permission. ChatGPT and Claude official directory submissions have not been completed.
+
+Hermes 공식 커뮤니티 카탈로그 등록 요청은 위 PR로 제출했으며 운영진 검토·CI 실행 승인을 기다립니다. ChatGPT·Claude 공식 디렉터리에는 아직 제출되지 않았습니다.
+
+[Official integrations page / 공식 연동 안내](https://habitude.ai/integrations#ai-agents). Download releases and publisher-managed catalogs are separate from official directory approval. 다운로드 제공·자체 카탈로그와 각 플랫폼의 공식 디렉터리 승인은 별개입니다.
 
 **[한국어 · English / Integrations](https://habitude.ai/integrations)** — the official installation and download page. Choose a language with the page switcher or open [한국어](https://habitude.ai/integrations?lang=ko) / [English](https://habitude.ai/integrations?lang=en).
 
