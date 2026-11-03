@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>노트 앱 연결 · Habitude</title>
+<meta name="description" content="Notion, Joplin, Logseq와 다른 노트 앱의 기록을 Habitude에서 이어가세요. 플러그인, 템플릿과 파일 가져오기 안내를 한곳에서 확인하세요.">
+<link rel="canonical" href="https://habitude.ai/integrations">
+<link rel="alternate" hreflang="ko" href="https://habitude.ai/integrations?lang=ko">
+<link rel="alternate" hreflang="en" href="https://habitude.ai/integrations?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://habitude.ai/integrations">
+<meta property="og:title" content="노트 앱 연결 · Habitude">
+<meta property="og:description" content="쓰던 곳의 기록을 Habitude에서 이어가세요.">
+<meta property="og:url" content="https://habitude.ai/integrations">
+<meta property="og:type" content="website">
+<style>
+:root{--paper:#fbfaf7;--surface:#fff;--ink:#292631;--muted:#696371;--line:#e6e0e9;--accent:#70519e;--accent-soft:#f0eaf7;--focus:#926cc6;--number:#ebe5f3;--shadow:0 8px 28px #3e285905;color-scheme:light dark}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:32px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;word-break:keep-all;overflow-wrap:anywhere}a{color:var(--accent);text-underline-offset:4px}a:hover{text-decoration-thickness:2px}a,button{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:5px}button{font:inherit;cursor:pointer}.wrap{width:min(1120px,100% - 64px);margin-inline:auto}.skip{position:absolute;left:20px;top:-80px;z-index:2;background:var(--surface);padding:10px 16px;border:1px solid var(--line);border-radius:8px}.skip:focus{top:12px}.site-header{border-bottom:1px solid var(--line)}nav{min-height:94px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;color:var(--ink);font-weight:730;font-size:21px;letter-spacing:-.6px;text-decoration:none}.brand img{width:38px;height:38px;display:block}.nav-end{display:flex;align-items:center;gap:28px}.app-link{font-size:14px;font-weight:650;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}.language{display:flex;gap:3px;padding:4px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}.language button{border:0;border-radius:6px;background:transparent;color:var(--muted);padding:7px 11px;font-size:13px;min-height:36px;white-space:nowrap}.language button[aria-pressed=true]{background:var(--accent-soft);color:var(--accent);font-weight:700}.hero{padding:76px 0 42px;max-width:810px}.eyebrow{color:var(--accent);font-size:12px;font-weight:750;letter-spacing:1.8px;margin:0 0 18px}h1{font-size:clamp(36px,5.2vw,58px);font-weight:730;line-height:1.2;letter-spacing:-2px;margin:0 0 25px;max-width:850px}.intro{font-size:18px;line-height:1.8;max-width:700px;color:var(--muted);margin:0}.section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin:16px 0 20px}h2{font-size:23px;letter-spacing:-.6px;line-height:1.4;margin:0}.section-heading>p{margin:0;font-size:13px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{display:flex;flex-direction:column;align-items:flex-start;padding:27px 26px 24px;background:var(--surface);border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow)}.tag{font-size:11px;line-height:1.5;border-radius:6px;background:var(--accent-soft);color:var(--accent);padding:5px 8px;max-width:100%}.card h3{font-size:25px;line-height:1.3;letter-spacing:-.6px;margin:23px 0 12px}.card>p{margin:0 0 24px;font-size:14px;color:var(--muted);line-height:1.8}.card .actions{margin-top:auto;display:flex;flex-direction:column;align-items:flex-start;gap:11px;font-size:13px;font-weight:650}.actions a{min-height:28px;display:inline-flex;align-items:center}.templates{display:flex;flex-wrap:wrap;gap:12px}.guide{margin-top:64px;padding:32px;border:1px solid var(--line);border-radius:15px;background:var(--surface)}.steps{list-style:none;padding:0;margin:25px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;counter-reset:steps}.steps li{counter-increment:steps;font-size:14px;line-height:1.8;color:var(--muted)}.steps li:before{content:"0" counter(steps);display:block;margin-bottom:9px;color:var(--accent);font-weight:750;font-size:12px;letter-spacing:1px}.steps strong{display:block;color:var(--ink);font-size:15px;font-weight:650;margin-bottom:5px}.limits{font-size:12px;color:var(--muted);padding-top:22px;margin:24px 0 0;border-top:1px solid var(--line)}.details{margin-top:28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}details+details{border-top:1px solid var(--line)}summary{padding:20px 0;cursor:pointer;font-size:14px;font-weight:650}details>div{max-width:850px;padding:0 0 24px;font-size:13px;line-height:1.85;color:var(--muted)}details p{margin:0 0 12px}details p:last-child{margin-bottom:0}details ul{padding-left:20px;margin:0}details li+li{margin-top:8px}.footer{margin:56px 0 0;padding:0 0 36px;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;font-size:12px;color:var(--muted)}.footer p{margin:0}.footer-links{display:flex;flex-wrap:wrap;gap:18px}.footer-links a{min-height:30px;display:inline-flex;align-items:center}noscript p{font-size:14px;color:var(--muted);padding:16px;border:1px solid var(--line);border-radius:8px}@media(max-width:960px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding-top:58px}.steps{gap:24px}}@media(max-width:620px){.wrap{width:calc(100% - 36px)}nav{min-height:80px;gap:12px}.brand{font-size:19px;gap:8px}.brand img{width:32px;height:32px}.nav-end{gap:8px;flex-wrap:wrap;justify-content:flex-end}.app-link{font-size:12px}.language{padding:3px}.language button{font-size:11px;padding:6px 8px;min-height:32px}.hero{padding:44px 0 28px}h1{font-size:37px;letter-spacing:-1.4px;line-height:1.25}.intro{font-size:16px}.section-heading{display:block;margin-top:16px}.section-heading>p{margin-top:6px}.grid{grid-template-columns:1fr;gap:14px}.card{padding:24px}.card h3{margin-top:18px}.card>p{margin-bottom:18px}.guide{margin-top:40px;padding:24px}.steps{grid-template-columns:1fr;gap:24px}.steps li:before{margin-bottom:4px}.footer{display:block;margin-top:36px}.footer-links{margin-top:14px}}@media(prefers-color-scheme:dark){:root{--paper:#141319;--surface:#1d1b23;--ink:#eeebf1;--muted:#b5aebb;--line:#37323f;--accent:#c8a8ee;--accent-soft:#30243e;--focus:#c19be8;--shadow:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">본문으로 바로가기</a>
+<header class="site-header">
+<nav class="wrap" aria-label="주 메뉴" data-i18n-label="navigation">
+<a class="brand" href="https://habitude.ai"><img src="data:image/png;base64,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" width="38" height="38" alt="">Habitude</a>
+<div class="nav-end"><a class="app-link" href="https://habitude.ai/app" data-i18n="openApp">앱 열기 ↗</a>
+<div class="language" role="group" aria-label="언어 선택" data-i18n-label="languageLabel"><button type="button" data-language="ko" lang="ko" aria-pressed="true">한국어</button><button type="button" data-language="en" lang="en" aria-pressed="false">English</button></div></div>
+</nav>
+</header>
+<main class="wrap" id="main">
+<section class="hero" aria-labelledby="page-title"><p class="eyebrow" data-i18n="eyebrow">노트 앱 연결</p><h1 id="page-title" data-i18n="headline">쓰던 곳의 기록을,<br>Habitude에서 이어가세요.</h1><p class="intro" data-i18n="intro">익숙한 노트 앱은 그대로. 선택한 글을 미리 보고 Habitude로 가져와, 기록과 성찰을 이어가세요.</p></section>
+<noscript><p>언어 전환에는 JavaScript가 필요합니다. Language switching requires JavaScript. <a href="https://github.com/legott-ai/habitude-integrations">한국어·English 안내 / Bilingual documentation ↗</a></p></noscript>
+<section aria-labelledby="connections-heading"><div class="section-heading"><h2 id="connections-heading" data-i18n="choose">사용하는 앱을 선택하세요</h2><p data-i18n="chooseNote">플러그인 · 템플릿 · 파일 가져오기</p></div>
+<div class="grid">
+<article class="card"><span class="tag" data-i18n="notionTag">Mac 개인 연결 · 템플릿</span><h3>Notion</h3><p data-i18n="notionBody">선택한 페이지를 읽기 전용으로 가져오세요. 일일 기록·습관·주간 회고 템플릿도 준비되어 있습니다.</p><div class="actions"><a href="#notion" data-i18n="setup">연결 방법 보기 ↓</a><div class="templates"><a href="https://github.com/legott-ai/habitude-integrations/releases/download/v0.1.0/habitude-notion-ko.zip" data-i18n="templateKo">한국어 템플릿 ↓</a><a href="https://github.com/legott-ai/habitude-integrations/releases/download/v0.1.0/habitude-notion-en.zip" data-i18n="templateEn">영어 템플릿 ↓</a></div></div></article>
+<article class="card"><span class="tag" data-i18n="joplinTag">데스크톱 플러그인</span><h3>Joplin</h3><p data-i18n="joplinBody">현재 노트를 직접 확인한 뒤 Markdown으로 내보내세요. 원본 ID를 함께 보관해 같은 글을 다시 가져올 때 확인합니다.</p><div class="actions"><a href="https://github.com/legott-ai/habitude-integrations/releases/download/v0.1.0/habitude-joplin-0.1.1.jpl" data-i18n="joplinDownload">플러그인 다운로드 ↓</a><a href="https://github.com/legott-ai/habitude-joplin-plugin#readme" data-i18n="installGuide">설치 안내 ↗</a></div></article>
+<article class="card"><span class="tag" data-i18n="logseqTag">Markdown 파일 그래프</span><h3>Logseq</h3><p data-i18n="logseqBody">지금 쓰는 페이지를 미리 보고 Markdown 파일로 저장하세요. Markdown 파일 그래프를 지원합니다.</p><div class="actions"><a href="https://github.com/legott-ai/habitude-integrations/releases/download/v0.1.0/habitude-logseq-0.1.0.zip" data-i18n="logseqDownload">플러그인 다운로드 ↓</a><a href="https://github.com/legott-ai/habitude-logseq-plugin#readme" data-i18n="installGuide">설치 안내 ↗</a></div></article>
+<article class="card"><span class="tag" data-i18n="clipperTag">Chrome · Edge / 미리 보기 버전</span><h3>Note Clipper</h3><p data-i18n="clipperBody">OneNote·Evernote 웹 등에서 선택한 글을 미리 보고 저장하세요. 확장을 클릭할 때 현재 탭에만 접근합니다.</p><div class="actions"><a href="https://github.com/legott-ai/habitude-integrations/releases/download/v0.1.0/habitude-note-clipper-0.1.0.zip" data-i18n="clipperDownload">확장 미리 보기 다운로드 ↓</a><a href="https://github.com/legott-ai/habitude-note-clipper#readme" data-i18n="installGuide">설치 안내 ↗</a></div></article>
+<article class="card"><span class="tag" data-i18n="fileTag">Mac 파일 가져오기</span><h3>Apple Notes · Bear</h3><p data-i18n="appleBody">내보낸 Markdown이나 텍스트 TextBundle·TextPack·ZIP 파일을 Habitude 설정에서 선택하세요.</p><div class="actions"><a href="#getting-started" data-i18n="importGuide">가져오는 방법 ↓</a></div></article>
+<article class="card"><span class="tag" data-i18n="fileTag">Mac 파일 가져오기</span><h3>Evernote · Markdown</h3><p data-i18n="evernoteBody">텍스트 ENEX와 Markdown 묶음을 가져오세요. 가져오기 전에 제목·날짜와 로컬 변경 여부를 확인합니다.</p><div class="actions"><a href="#getting-started" data-i18n="formatsGuide">지원 형식과 가져오기 ↓</a></div></article>
+</div></section>
+<section class="guide" id="getting-started" aria-labelledby="guide-heading"><h2 id="guide-heading" data-i18n="guideHeading">Mac 앱에서 이어가기</h2><ol class="steps"><li><strong data-i18n="stepOneTitle">최신 앱을 준비하세요</strong><span data-i18n="stepOne">Habitude Mac을 업데이트하고, 원래 노트 앱에서 원하는 글을 내보내세요.</span></li><li><strong data-i18n="stepTwoTitle">파일을 선택하세요</strong><span data-i18n="stepTwo">설정 → 다른 노트 앱에서 가져오기에서 원본 앱과 내보낸 파일을 선택하세요.</span></li><li><strong data-i18n="stepThreeTitle">미리 보고 가져오세요</strong><span data-i18n="stepThree">제목·날짜·주의 사항을 확인한 뒤 가져오기를 누르세요. 원래 앱의 글은 보존됩니다.</span></li></ol><p class="limits" data-i18n="limits">한 번에 파일 20개·기록 100개·총 8 MiB까지. 현재 파일 가져오기는 텍스트 전용이며, 첨부가 포함된 내보내기는 가져오기를 중단합니다.</p></section>
+<div class="details">
+<details id="notion"><summary data-i18n="notionHeading">Notion 연결은 어떻게 설정하나요?</summary><div><p data-i18n="notionSetupOne">내 Notion 워크스페이스에 읽기 전용 내부 연결을 만들고, 가져올 페이지만 공유하세요. Habitude Mac → 설정 → Notion 연결에 토큰을 입력하면 Mac 키체인에 저장됩니다.</p><p data-i18n="notionSetupTwo">페이지 링크를 최대 20개 입력하고 미리 본 뒤 가져오세요. 현재는 Mac 개인 연결이며, 공개 OAuth 앱이나 Notion Marketplace 등록 앱은 아닙니다.</p><p data-i18n="notionSetupThree">템플릿 ZIP에는 일일 기록·습관·주간 회고 Markdown이 들어 있습니다. Notion의 텍스트 및 Markdown 가져오기로 열어 사용하세요. 자동 수식이나 반복 작업은 포함하지 않습니다.</p><a href="https://github.com/legott-ai/habitude-integrations#notion" data-i18n="notionFullGuide">자세한 Notion 안내 ↗</a></div></details>
+<details><summary data-i18n="supportHeading">어떤 기능과 설치 경로를 지원하나요?</summary><div><ul><li data-i18n="supportOne">Joplin·Logseq는 다운로드하여 직접 설치할 수 있습니다. Logseq Marketplace 등록 요청은 제출되었으며, 승인은 대기 중입니다.</li><li data-i18n="supportTwo">Logseq의 DB 그래프·Org 형식은 지원하지 않습니다. Note Clipper는 미리 보기 버전이며 Chrome 웹 스토어에 등록되지 않았습니다.</li><li data-i18n="supportThree">현재 연동은 사용자가 확인하는 텍스트 가져오기입니다. 실시간 양방향 편집이나 사진·첨부 백업은 제공하지 않습니다.</li></ul></div></details>
+<details><summary data-i18n="privacyHeading">원본과 가져온 기록은 어디에 보관되나요?</summary><div><p data-i18n="privacyOne">원본 앱의 글은 수정하지 않습니다. 가져온 글은 Habitude에서 선택한 로컬 저장소 또는 Obsidian Vault에 저장됩니다. 같은 원본을 다시 가져오면 중복과 로컬 수정·이동·삭제를 확인합니다.</p><p data-i18n="privacyTwo">파일 가져오기는 Mac에서 처리합니다. 계정의 클라우드 동기화를 켠 경우, 이후 동기화에는 해당 계정의 설정이 적용됩니다.</p><p data-i18n="privacyThree">문제 신고에는 재현용 예시만 첨부해 주세요. 개인 기록과 연결 토큰은 포함하지 마세요.</p></div></details>
+</div>
+<footer class="footer"><p data-i18n="footerNote">익숙한 도구에서 쓰고, Habitude에서 이어가세요.</p><div class="footer-links"><a href="https://github.com/legott-ai/habitude-integrations" data-i18n="docs">설치·지원 안내 ↗</a><a href="https://habitude.ai" data-i18n="home">Habitude 홈 ↗</a></div></footer>
+</main>
+<script>
+(() => {
+  'use strict';
+  const translations = {
+    ko: {
+      title: '노트 앱 연결 · Habitude',
+      description: 'Notion, Joplin, Logseq와 다른 노트 앱의 기록을 Habitude에서 이어가세요. 플러그인, 템플릿과 파일 가져오기 안내를 한곳에서 확인하세요.',
+      skip: '본문으로 바로가기', navigation: '주 메뉴', languageLabel: '언어 선택', openApp: '앱 열기 ↗',
+      eyebrow: '노트 앱 연결', headline: '쓰던 곳의 기록을,\nHabitude에서 이어가세요.',
+      intro: '익숙한 노트 앱은 그대로. 선택한 글을 미리 보고 Habitude로 가져와, 기록과 성찰을 이어가세요.',
+      choose: '사용하는 앱을 선택하세요', chooseNote: '플러그인 · 템플릿 · 파일 가져오기',
+      notionTag: 'Mac 개인 연결 · 템플릿', notionBody: '선택한 페이지를 읽기 전용으로 가져오세요. 일일 기록·습관·주간 회고 템플릿도 준비되어 있습니다.',
+      setup: '연결 방법 보기 ↓', templateKo: '한국어 템플릿 ↓', templateEn: '영어 템플릿 ↓',
+      joplinTag: '데스크톱 플러그인', joplinBody: '현재 노트를 직접 확인한 뒤 Markdown으로 내보내세요. 원본 ID를 함께 보관해 같은 글을 다시 가져올 때 확인합니다.',
+      joplinDownload: '플러그인 다운로드 ↓', installGuide: '설치 안내 ↗', logseqTag: 'Markdown 파일 그래프',
+      logseqBody: '지금 쓰는 페이지를 미리 보고 Markdown 파일로 저장하세요. Markdown 파일 그래프를 지원합니다.', logseqDownload: '플러그인 다운로드 ↓',
+      clipperTag: 'Chrome · Edge / 미리 보기 버전', clipperBody: 'OneNote·Evernote 웹 등에서 선택한 글을 미리 보고 저장하세요. 확장을 클릭할 때 현재 탭에만 접근합니다.', clipperDownload: '확장 미리 보기 다운로드 ↓',
+      fileTag: 'Mac 파일 가져오기', appleBody: '내보낸 Markdown이나 텍스트 TextBundle·TextPack·ZIP 파일을 Habitude 설정에서 선택하세요.', importGuide: '가져오는 방법 ↓',
+      evernoteBody: '텍스트 ENEX와 Markdown 묶음을 가져오세요. 가져오기 전에 제목·날짜와 로컬 변경 여부를 확인합니다.', formatsGuide: '지원 형식과 가져오기 ↓',
+      guideHeading: 'Mac 앱에서 이어가기', stepOneTitle: '최신 앱을 준비하세요', stepOne: 'Habitude Mac을 업데이트하고, 원래 노트 앱에서 원하는 글을 내보내세요.', stepTwoTitle: '파일을 선택하세요', stepTwo: '설정 → 다른 노트 앱에서 가져오기에서 원본 앱과 내보낸 파일을 선택하세요.', stepThreeTitle: '미리 보고 가져오세요', stepThree: '제목·날짜·주의 사항을 확인한 뒤 가져오기를 누르세요. 원래 앱의 글은 보존됩니다.',
+      limits: '한 번에 파일 20개·기록 100개·총 8 MiB까지. 현재 파일 가져오기는 텍스트 전용이며, 첨부가 포함된 내보내기는 가져오기를 중단합니다.',
+      notionHeading: 'Notion 연결은 어떻게 설정하나요?', notionSetupOne: '내 Notion 워크스페이스에 읽기 전용 내부 연결을 만들고, 가져올 페이지만 공유하세요. Habitude Mac → 설정 → Notion 연결에 토큰을 입력하면 Mac 키체인에 저장됩니다.', notionSetupTwo: '페이지 링크를 최대 20개 입력하고 미리 본 뒤 가져오세요. 현재는 Mac 개인 연결이며, 공개 OAuth 앱이나 Notion Marketplace 등록 앱은 아닙니다.', notionSetupThree: '템플릿 ZIP에는 일일 기록·습관·주간 회고 Markdown이 들어 있습니다. Notion의 텍스트 및 Markdown 가져오기로 열어 사용하세요. 자동 수식이나 반복 작업은 포함하지 않습니다.', notionFullGuide: '자세한 Notion 안내 ↗',
+      supportHeading: '어떤 기능과 설치 경로를 지원하나요?', supportOne: 'Joplin·Logseq는 다운로드하여 직접 설치할 수 있습니다. Logseq Marketplace 등록 요청은 제출되었으며, 승인은 대기 중입니다.', supportTwo: 'Logseq의 DB 그래프·Org 형식은 지원하지 않습니다. Note Clipper는 미리 보기 버전이며 Chrome 웹 스토어에 등록되지 않았습니다.', supportThree: '현재 연동은 사용자가 확인하는 텍스트 가져오기입니다. 실시간 양방향 편집이나 사진·첨부 백업은 제공하지 않습니다.',
+      privacyHeading: '원본과 가져온 기록은 어디에 보관되나요?', privacyOne: '원본 앱의 글은 수정하지 않습니다. 가져온 글은 Habitude에서 선택한 로컬 저장소 또는 Obsidian Vault에 저장됩니다. 같은 원본을 다시 가져오면 중복과 로컬 수정·이동·삭제를 확인합니다.', privacyTwo: '파일 가져오기는 Mac에서 처리합니다. 계정의 클라우드 동기화를 켠 경우, 이후 동기화에는 해당 계정의 설정이 적용됩니다.', privacyThree: '문제 신고에는 재현용 예시만 첨부해 주세요. 개인 기록과 연결 토큰은 포함하지 마세요.',
+      footerNote: '익숙한 도구에서 쓰고, Habitude에서 이어가세요.', docs: '설치·지원 안내 ↗', home: 'Habitude 홈 ↗'
+    },
+    en: {
+      title: 'Note app integrations · Habitude',
+      description: 'Continue your notes in Habitude with Notion, Joplin, Logseq and other writing apps. Find plugins, templates and file import guides in one place.',
+      skip: 'Skip to content', navigation: 'Main navigation', languageLabel: 'Choose language', openApp: 'Open app ↗',
+      eyebrow: 'NOTE APP INTEGRATIONS', headline: 'Your notes,\ncontinued in Habitude.',
+      intro: 'Keep the writing tools you know. Preview selected writing and bring it into Habitude to keep recording and reflecting.',
+      choose: 'Choose your note app', chooseNote: 'Plugins · Templates · File import',
+      notionTag: 'Personal Mac connection · Templates', notionBody: 'Import selected pages with a read-only connection. Start writing with daily journal, habit and weekly reflection templates.',
+      setup: 'How to connect ↓', templateKo: 'Korean templates ↓', templateEn: 'English templates ↓',
+      joplinTag: 'Desktop plugin', joplinBody: 'Review the current note and export it as Markdown. The original source ID helps identify the same writing when you import it again.',
+      joplinDownload: 'Download plugin ↓', installGuide: 'Installation guide ↗', logseqTag: 'Markdown file graph',
+      logseqBody: 'Preview the page you are writing and save it as Markdown. Supports Markdown file graphs.', logseqDownload: 'Download plugin ↓',
+      clipperTag: 'Chrome · Edge / Preview', clipperBody: 'Preview and save selected text from OneNote, Evernote web and other websites. Only accesses the current tab when you click the extension.', clipperDownload: 'Download extension preview ↓',
+      fileTag: 'Mac file import', appleBody: 'Choose your exported Markdown or text-only TextBundle, TextPack or ZIP files in Habitude settings.', importGuide: 'How to import ↓',
+      evernoteBody: 'Bring in text-only ENEX and Markdown bundles. Review titles, dates and any local changes before importing.', formatsGuide: 'Formats and import guide ↓',
+      guideHeading: 'Continue in the Mac app', stepOneTitle: 'Start with the latest app', stepOne: 'Update Habitude for Mac and export the writing you want from your original note app.', stepTwoTitle: 'Choose your files', stepTwo: 'Go to Settings → Import from other note apps. Choose the original app and its exported files.', stepThreeTitle: 'Preview, then import', stepThree: 'Check the titles, dates and warnings, then import. Your writing in the original app stays intact.',
+      limits: 'Up to 20 files, 100 notes and 8 MiB total per import. File import currently supports text only; exports containing attachments are stopped.',
+      notionHeading: 'How do I connect Notion?', notionSetupOne: 'Create a read-only internal connection in your Notion workspace and share only the pages you want to import. Enter its token in Habitude Mac → Settings → Notion connection. It is stored in Mac Keychain.', notionSetupTwo: 'Enter up to 20 page links, preview them, then import. This is currently a personal Mac connection, not a public OAuth app or an approved Notion Marketplace app.', notionSetupThree: 'The template ZIP contains daily journal, habit and weekly reflection Markdown files. Use Notion’s Text & Markdown importer to open them. Automated formulas and recurring tasks are not included.', notionFullGuide: 'Full Notion guide ↗',
+      supportHeading: 'Which features and installation methods are supported?', supportOne: 'Joplin and Logseq are available as downloads for manual installation. The Logseq Marketplace listing request has been submitted and is awaiting approval.', supportTwo: 'Logseq DB graphs and Org format are not supported. Note Clipper is a preview and is not listed in the Chrome Web Store.', supportThree: 'These integrations import text after your review. Live two-way editing and photo or attachment backups are not provided.',
+      privacyHeading: 'Where do my original and imported notes stay?', privacyOne: 'Your writing in the original app is not modified. Imported writing goes into the local store or Obsidian Vault selected in Habitude. Reimport checks for duplicates and local edits, moves or deletions.', privacyTwo: 'File import runs on your Mac. If you enable account cloud sync, your account settings govern subsequent syncing of imported writing.', privacyThree: 'Use reproducible sample files for support issues. Keep private writing and connection tokens out of reports.',
+      footerNote: 'Write with familiar tools. Continue in Habitude.', docs: 'Installation and support ↗', home: 'Habitude home ↗'
+    }
+  };
+  const storageKey = 'habitude.integrations.language';
+  const supported = value => value === 'ko' || value === 'en';
+  function initialLanguage() {
+    const query = new URL(window.location.href).searchParams.get('lang');
+    if (supported(query)) return query;
+    try {
+      const stored = localStorage.getItem(storageKey);
+      if (supported(stored)) return stored;
+    } catch (_) { /* Browsing without storage remains supported. */ }
+    const languages = navigator.languages || [navigator.language || 'en'];
+    for (const language of languages) {
+      const base = language.toLowerCase().split('-')[0];
+      if (supported(base)) return base;
+    }
+    return 'en';
+  }
+  function applyLanguage(language, updateURL) {
+    const copy = translations[language];
+    document.documentElement.lang = language;
+    document.title = copy.title;
+    document.querySelector('meta[name="description"]').content = copy.description;
+    document.querySelector('meta[property="og:title"]').content = copy.title;
+    document.querySelector('meta[property="og:description"]').content = copy.intro;
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const value = copy[element.dataset.i18n];
+      if (element.id === 'page-title') {
+        element.replaceChildren();
+        value.split('\n').forEach((line, index) => {
+          if (index) element.append(document.createElement('br'));
+          element.append(document.createTextNode(line));
+        });
+      } else element.textContent = value;
+    });
+    document.querySelectorAll('[data-i18n-label]').forEach(element => {
+      element.setAttribute('aria-label', copy[element.dataset.i18nLabel]);
+    });
+    document.querySelectorAll('[data-language]').forEach(button => {
+      button.setAttribute('aria-pressed', String(button.dataset.language === language));
+    });
+    try { localStorage.setItem(storageKey, language); } catch (_) { /* Optional preference only. */ }
+    if (updateURL) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', language);
+      try { history.replaceState(null, '', url); } catch (_) { /* file: preview or restricted history. */ }
+    }
+  }
+  document.querySelectorAll('[data-language]').forEach(button => {
+    button.addEventListener('click', () => applyLanguage(button.dataset.language, true));
+  });
+  window.addEventListener('popstate', () => applyLanguage(initialLanguage(), false));
+  // Expand the setup when a card link targets the collapsed Notion guide.
+  function revealLinkedDetails() {
+    if (window.location.hash === '#notion') document.getElementById('notion').open = true;
+  }
+  window.addEventListener('hashchange', revealLinkedDetails);
+  applyLanguage(initialLanguage(), false);
+  revealLinkedDetails();
+})();
+</script>
+</body>
+</html>

@@ -1,5 +1,7 @@
 # Habitude note integrations · 노트 앱 연결
 
+**[한국어 · English / Integrations](https://habitude.ai/integrations)** — the official installation and download page. Choose a language with the page switcher or open [한국어](https://habitude.ai/integrations?lang=ko) / [English](https://habitude.ai/integrations?lang=en).
+
 Use the writing tools you already have, then bring selected text into Habitude. These first releases use **explicit, local file exchange**. They do not silently read accounts or provide automatic two-way synchronization.
 
 기존 노트 앱에서 선택한 기록을 Habitude로 이어 가져옵니다. 현재 배포는 사용자가 직접 확인하는 텍스트 교환 방식입니다.
