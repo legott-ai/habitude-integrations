@@ -1,5 +1,11 @@
 # Habitude note integrations · 노트 앱 연결
 
+## AI agent extensions · 에이전트 확장
+
+[Hermes Agent, ChatGPT desktop and Claude Code](https://github.com/legott-ai/habitude-agent-integrations) provide platform-native skills/plugins and a common local MCP launcher for explicitly selected Habitude / Obsidian writing. Find downloads in the [official integrations page](https://habitude.ai/integrations#ai-agents). These packages support search, excerpts and cited reflection; they do not edit entries or habits. ChatGPT web/mobile are not connected by the desktop package. Returned excerpts may enter the host's configured model context; local setup requires explicit scope and acknowledgement.
+
+Hermes Agent·ChatGPT 데스크톱·Claude Code용 스킬·플러그인을 제공합니다. 선택한 Vault 검색·발췌·근거 기반 회고를 지원하고 원본을 수정하지 않습니다. 검색 결과가 에이전트의 모델 문맥에 전달될 수 있으므로 연결할 Vault를 직접 고르고 동의해야 합니다. 다운로드 배포와 공식 디렉터리 승인은 별개입니다.
+
 **[한국어 · English / Integrations](https://habitude.ai/integrations)** — the official installation and download page. Choose a language with the page switcher or open [한국어](https://habitude.ai/integrations?lang=ko) / [English](https://habitude.ai/integrations?lang=en).
 
 Use the writing tools you already have, then bring selected text into Habitude. These first releases use **explicit, local file exchange**. They do not silently read accounts or provide automatic two-way synchronization.
